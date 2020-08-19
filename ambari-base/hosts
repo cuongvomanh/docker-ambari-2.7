@@ -1,0 +1,3 @@
+172.17.0.2 amb-server.service.consul amb-server
+172.17.0.3 amb1.service.consul amb1
+172.17.0.4 amb2.service.consul amb2

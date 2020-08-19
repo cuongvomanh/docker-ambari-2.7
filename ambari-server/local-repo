@@ -1,0 +1,4 @@
+Ambari: http://172.17.0.2/ambari/centos7/2.7.3.0-139/
+HDP: http://172.17.0.2/HDP/centos7/3.1.0.0-78/
+HDP-GPL: http://172.17.0.2/HDP-GPL/centos7/3.1.0.0-78/
+HDP-UTILS: http://172.17.0.2/HDP-UTILS/centos7/1.1.0.22/

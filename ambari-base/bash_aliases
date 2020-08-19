@@ -1,0 +1,4 @@
+export proxy_http="http://10.61.11.42:3128"
+export https_proxy="http://10.61.11.42:3128"
+export ftp_proxy="http://10.61.11.42:3128"
+export no_proxy="localhost,127.0.0.1,172.17.0.2,172.17.0.3,172.17.0.4,::1"
