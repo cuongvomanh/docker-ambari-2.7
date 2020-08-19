@@ -1,4 +1,13 @@
-# from https://leifengblog.net/blog/install-hortonworks-hdp-3-1-0-on-cluster-of-vmware-virtual-machines/#21--create-and-start-an-http-sever-on-the-master-host
+# docker-ambari
+from https://leifengblog.net/blog/install-hortonworks-hdp-3-1-0-on-cluster-of-vmware-virtual-machines/#21--create-and-start-an-http-sever-on-the-master-host
+
+# Build image
+
+```
+docker build -t hortonworks/ambari-base:2.7.3 < ambari-base/Dockerfile
+docker build -t hortonworks/ambari-server:2.7.3 < ambari-server/Dockerfile
+```
+# Start container
 ```
 docker run -d --privileged --name amb-server -it hortonworks/ambari-base:2.7.3
 docker run -d --privileged --name amb1 -it hortonworks/ambari-base:2.7.3
@@ -12,23 +21,23 @@ docker inspect amb-server | grep IPAdd
 <!--docker cp hosts amb1:/etc/hosts-->
 <!--docker cp hosts amb2:/etc/hosts-->
 ```
-#Each
+# Each
 ```
 passwd
 ```
 
-#Master
+# Master
 ```
 ssh-keygen -t rsa
 ssh-copy-id localhost
 scp -pr /root/.ssh root@amb1.service.consul:/root/
 scp -pr /root/.ssh root@amb2.service.consul:/root/
 ```
-## Each
+# Each
 ```
 systemctl start ntpd
 ```
-#Master
+# Master
 ```
 service httpd restart
 chkconfig httpd on
