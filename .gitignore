@@ -3,3 +3,4 @@ ambari-base-local/local.repo
 ambari-base/bash_profile
 ambari-base/ssh/
 ambari-server-local/local.repo
+ambari-server/init.sh

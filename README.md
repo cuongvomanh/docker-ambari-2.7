@@ -1,6 +1,21 @@
 # docker-ambari
 from https://leifengblog.net/blog/install-hortonworks-hdp-3-1-0-on-cluster-of-vmware-virtual-machines/#21--create-and-start-an-http-sever-on-the-master-host
 
+# Quick start
+
+## Run scripts to build and start server 
+```
+$ ./scripts/build-image.sh
+$ ./scripts/create-local.sh
+```
+## Get ip of amb-server
+```
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' amb-server
+```
+## Accept link 
+
+http://${amb-server-ip}:8080/ 
+
 # Build image
 
 ```
