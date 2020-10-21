@@ -33,3 +33,10 @@ ADD network /etc/sysconfig/network
 RUN yum install -y initscripts && yum clean all
 
 RUN yum install -y ntp && systemctl enable ntpd
+RUN wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.7.3.0/ambari.repo -O	/etc/yum.repos.d/ambari-public.repo
+#ADD ambari-local.repo /etc/yum.repos.d/ambari-local.repo 
+RUN yum install -y ambari-agent
+#RUN mkdir /etc/yum.repos.d/backup_repo && mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/backup_repo
+#ADD local.repo /etc/yum.repos.d/local.repo 
+#RUN yum clean all
+ADD start-base.sh /root/start-base.sh
