@@ -19,7 +19,6 @@ ADD https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.49.
 ADD https://jdbc.postgresql.org/download/postgresql-42.2.14.jar /var/lib/ambari-server/resources/postgres-jdbc-driver.jar
 RUN yum install -y mysql-connector-java
 RUN cp /usr/share/java/mysql-connector-java.jar /var/lib/ambari-server/resources/mysql-connector-java.jar
-ADD init.sh /root/init.sh
 ADD start-server.sh /root/start-server.sh
 RUN yum install -y sshpass
 
